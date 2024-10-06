@@ -313,14 +313,348 @@ nav li:hover::after{
 }
 
 
+/*-----------service-----------*/
+
+.service{
+    width: 95%;
+    margin: auto;
+    max-width: 1600px;
+  }
+  .s4gridarea{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(400px,100%),1fr));
+    grid-gap: 10px;
+  }
+  
+  .s4grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .s4grid img {
+  height: 250px;
+  width: 380px ;
+  /* object-fit: ; */
+  transform: scale(1.0);
+  z-index: 10;
+  transition: transform 0.4s ease;
+  }
+  
+  .img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: 250px;
+  width: 380px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  border: 2px solid white;
+  position: relative;
+  background-color: white;
+  
+  }
+  
+  .caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .caption p{
+   color: orange;
+   line-height: 20px;
+  }
+  .projectcon{
+    font-size: 14px !important;
+    color: #dedce3 !important;
+  }
+  
+  .transparent-box {
+  height: 250px;
+  width: 380px;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+  }
+  
+  .img-box:hover img { 
+  transform: scale(1.1);
+  }
+  
+  .img-box:hover .transparent-box {
+  background-color:rgba(0, 0, 0, 0.5);
+  }
+  
+  .img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+  }
+  .s4_heading{
+    text-align: center;
+  }
+  .img-box:hover {
+  cursor: pointer;
+  }
+  
+  .caption > p:nth-child(2) {
+  font-size: 1em;
+  }
+  
+  .opacity-low {
+  opacity: 0.8;
+  color: orange;
+  
+  }
+  .section4h .eduh ::after{
+    position: absolute;
+    content: '';
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--secondary);
+  }
+  
+  .section4h{
+    position: relative;
+    padding-top: 100px;
+    margin-bottom: 70px;
+  
+  }
+  
+  
+
+
+/*---------section5-------*/
+/* Section Title */
+.section5 {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.section5 .section_title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #353535;
+}
+
+.section5 .subtitle {
+    margin-bottom: 40px;
+}
+
+/* Specialties Container */
+.ourspecialties {
+    flex: 1;
+    margin: 15px;
+    max-width: 300px; /* Adjust for a neat width in grid */
+}
+
+/* Specialties Background */
+.ourspecialtiesbg {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Hover Effect */
+.ourspecialtiesbg:hover {
+    transform: translateY(-10px);
+}
+
+/* Icons */
+.ourspecialtiesbgicon i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Specialties Content */
+.ourspecialties-con h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ourspecialties-con p {
+    font-size: 14px;
+    color: #717171;
+}
+
+/* Flexbox Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ourspecialties {
+        max-width: 100%; /* Ensures full width on mobile */
+        margin-bottom: 30px; /* Adds space between items */
+    }
+}
+
+@media (max-width: 480px) {
+    .section5 .section_title {
+        font-size: 24px;
+    }
+
+    .section5 .subtitle {
+        font-size: 14px;
+    }
+
+    .ourspecialties-con h3 {
+        font-size: 18px;
+    }
+
+    .ourspecialtiesbgicon i {
+        font-size: 30px;
+    }
+}
 
 
 
+/*-------section6------*/
+/* Section 6 Styles */
+.section6 {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
 
+/* Counter List */
+.planing_future_leftcontentbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
 
+.counterlist {
+    text-align: center;
+    flex-basis: 30%; /* Adjust the size of each counter block */
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
 
+.counterlist:hover {
+    transform: translateY(-10px);
+}
 
+.counter-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
 
+.circle_countr .counter {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.circle_countr h6 {
+    font-size: 16px;
+    color: #353535;
+}
+
+/* Right Content Box */
+.planing_future_rightcontentbox {
+    padding-left: 20px;
+    max-width: 600px;
+}
+
+.planing_future_rightcontentbox p {
+    font-size: 16px;
+    color: #717171;
+    line-height: 1.6;
+}
+
+.sec_content_main_title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #353535;
+    margin-bottom: 10px;
+}
+
+.custombtn {
+    margin-top: 20px;
+}
+
+.morebutton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.morebutton:hover {
+    background-color: #0056b3;
+}
+
+/* Flexbox Layout */
+.container_s6 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .planing_future_leftcontentbox {
+        flex-direction: column;
+    }
+
+    .counterlist {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    .planing_future_rightcontentbox {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .circle_countr .counter {
+        font-size: 28px;
+    }
+
+    .sec_content_main_title {
+        font-size: 18px;
+    }
+
+    .planing_future_rightcontentbox p {
+        font-size: 14px;
+    }
+
+    .morebutton {
+        padding: 8px 15px;
+    }
+}
 
 
 
