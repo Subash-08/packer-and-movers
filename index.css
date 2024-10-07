@@ -13,11 +13,11 @@ html{
     background-color: rgb(254, 231, 190);
 }
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(255, 181, 42);
+    background-color: rgb(231, 230, 229);
     border-radius: 8px;
 }
 nav {
-    background: rgb(227, 218, 218);
+    background: rgb(255, 255, 255);
     width: 100%;
     height: 100px;
     top: 0;
@@ -33,7 +33,7 @@ a {
 nav ul li {
     list-style-type: none;
 }
-ul li {
+nav ul li {
     padding-top: 20px;
     padding: 15px;
 }
@@ -396,6 +396,7 @@ nav li:hover::after{
   }
   .s4_heading{
     text-align: center;
+    margin: 50px 0;
   }
   .img-box:hover {
   cursor: pointer;
@@ -410,24 +411,8 @@ nav li:hover::after{
   color: orange;
   
   }
-  .section4h .eduh ::after{
-    position: absolute;
-    content: '';
-    width: 10px;
-    border-radius: 50%;
-    height: 10px;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: var(--secondary);
-  }
   
-  .section4h{
-    position: relative;
-    padding-top: 100px;
-    margin-bottom: 70px;
-  
-  }
+
   
   
 
@@ -658,115 +643,82 @@ nav li:hover::after{
 
 
 
+/*footer*/
 
-/*footer------*/
-/* Footer Main Container */
-#footer-wrapper {
-    background-color: #222;
-    color: #fff;
-    padding: 40px 0;
+footer{
+    background-color: black;
+    color: white;
 }
-
-.container.footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Column Layout */
-.cols-4 {
+.footer{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 columns on desktop, 1 on mobile */
-    gap: 20px;
-}
-
-/* Widget Columns */
-.widget-column-1, .widget-column-2, .widget-column-3, .widget-column-4 {
+    grid-template-columns: repeat(auto-fit,minmax(min(300px,100%),1fr));
+    grid-gap: 20px;
+   width: 95%;
+   margin: auto;
     padding: 20px;
 }
-
-.widget-column-1 img {
-    width: 180px; /* Adjust logo size */
-    margin-bottom: 20px;
+footer hr{
+padding: 1px 0;
 }
-
-.widget-column-1 p {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* Services Links */
-.menu-footer-services-menu-container ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.menu-footer-services-menu-container ul li {
-    margin-bottom: 10px;
-}
-
-.menu-footer-services-menu-container ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.menu-footer-services-menu-container ul li a:hover {
-    color: #007bff;
-}
-
-/* Address Section */
-.widget-column-3 p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.widget-column-3 a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.widget-column-3 a:hover {
-    color: #007bff;
-}
-
-/* Service Hours Section */
-.workinghours {
+.workinghours{
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+footer h5{
+    margin-bottom: 20px;
+    color: orange;
+}
+footer li{
+    padding: 5px 0;
+}
+.f_con1{
+    font-size: 13px !important;
+    margin-bottom: 50px;
+}
+footer img{
+    margin-bottom: 30px;
+}
+.footer-con{
+    margin-top: 30px;
+   line-height: 24px;
+    font-size: 15px;
+}
+.footer-con h3{
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.footer-con p{
+    line-height: 20px;
+    font-size: 15px;
+    text-align: start;
 }
 
-.workinghours span {
-    font-size: 14px;
+.footer-down{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+.footer-con .icon{
+   
+    margin-left: 20px;
+}
+.footer i{
+    letter-spacing: 5px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+ 
+}
+.footer i:hover{
+    color: orange;
+}
+.footer li{
+    list-style-type: none;
 }
 
-/* Clearfix */
-.clear {
-    clear: both;
-}
+.con_foot{
+    margin: auto;
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .cols-4 {
-        grid-template-columns: 1fr; /* Stack columns vertically */
-    }
-
-    .widget-column-1 img {
-        margin: 0 auto;
-        display: block;
-    }
-
-    .widget-column-3 p {
-        text-align: center;
-    }
-
-    .workinghours {
-        flex-direction: column; /* Stacks time and day */
-        text-align: center;
-    }
-
-    .workinghours span {
-        margin-bottom: 5px;
-    }
 }
