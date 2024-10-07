@@ -214,6 +214,7 @@ nav li:hover::after{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     width: 90%;
+    max-width: 1800px;
     margin: auto;
     margin-top: 100px;
     align-items: center;
@@ -361,6 +362,7 @@ nav li:hover::after{
   bottom: 5px;
   left: 20px;
   opacity: 0.0;
+  width: 80%;
   transition: transform 0.3s ease, opacity 0.3s ease;
   }
   .caption p{
@@ -512,6 +514,7 @@ nav li:hover::after{
     .ourspecialtiesbgicon i {
         font-size: 30px;
     }
+    
 }
 
 
@@ -519,91 +522,120 @@ nav li:hover::after{
 /*-------section6------*/
 /* Section 6 Styles */
 .section6 {
-    padding: 50px 0;
-    background-color: #f9f9f9;
-}
-
-/* Counter List */
-.planing_future_leftcontentbox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px;
+    padding: 20px;
+    width: 95%;
+    padding-bottom: 150px;
+    margin: auto;
+    background-color: #f9f9f9;
+}
+.planing_leftcontentbox{
+box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+border-radius: 50px;
+margin: auto;
+width: 75%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+
+.planing_future_leftcontentbox, .planing_future_rightcontentbox {
+    width: 48%;
 }
 
 .counterlist {
-    text-align: center;
-    flex-basis: 30%; /* Adjust the size of each counter block */
-    background-color: #fff;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.counterlist:hover {
-    transform: translateY(-10px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .counter-icon img {
     width: 50px;
     height: 50px;
-    margin-bottom: 10px;
+    margin-right: 20px;
 }
 
-.circle_countr .counter {
+.circle_countr {
+    text-align: left;
+}
+
+.counter {
     font-size: 36px;
     font-weight: bold;
-    color: #007bff;
+    color: #333;
 }
 
-.circle_countr h6 {
+.section6  h6 {
+    margin: 0;
     font-size: 16px;
-    color: #353535;
-}
-
-/* Right Content Box */
-.planing_future_rightcontentbox {
-    padding-left: 20px;
-    max-width: 600px;
-}
-
-.planing_future_rightcontentbox p {
-    font-size: 16px;
-    color: #717171;
-    line-height: 1.6;
+    color: #666;
 }
 
 .sec_content_main_title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    color: #353535;
+    color: #333;
     margin-bottom: 10px;
 }
 
-.custombtn {
-    margin-top: 20px;
+.section6 p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-.morebutton {
-    background-color: #007bff;
-    color: #fff;
+.custombtn .morebutton {
+    background-color: #ff6600;
+    color: white;
     padding: 10px 20px;
-    border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
-.morebutton:hover {
-    background-color: #0056b3;
+.custombtn .morebutton:hover {
+    background-color: #e65c00;
 }
 
-/* Flexbox Layout */
-.container_s6 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media (max-width: 768px) {
+    .planing_future_leftcontentbox, .planing_future_rightcontentbox {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .counterlist {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .counter-icon img {
+        margin: 0 auto 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter {
+        font-size: 30px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+
+    .sec_content_main_title {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .custombtn .morebutton {
+        padding: 8px 16px;
+    }
 }
 
 /* Responsive Design */
@@ -656,6 +688,7 @@ footer{
    width: 95%;
    margin: auto;
     padding: 20px;
+    max-width: 1800px;
 }
 footer hr{
 padding: 1px 0;
