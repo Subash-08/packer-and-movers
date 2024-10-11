@@ -804,11 +804,12 @@ footer img{
   
   .testimonial-section {
     width: 80%;
+    max-width: 1500px;
     margin: 0 auto;
     position: relative;
     padding: 40px 0;
     overflow: hidden;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
   }
   
   /* Carousel container */
@@ -870,8 +871,9 @@ footer img{
   }
   
   .testimonial-image img {
-    width: 150px;
-    border-radius: 50%;
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
   }
   
   /* Controls (Next/Prev) */
