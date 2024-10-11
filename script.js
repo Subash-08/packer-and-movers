@@ -1,13 +1,3 @@
-const showmenu = document.getElementById("menu")
-const showul = document.querySelector("nav ul")
-
-showmenu.addEventListener("click" ,() => {
-    showul.classList.toggle("showmenu")
-   })
-
-showul.addEventListener("click",() => {
-    showul.classList.toggle("showmenu")
-})
 
 
 
@@ -19,13 +9,13 @@ let currentIndex = 0;
 // Function to hide all testimonials
 function hideAllTestimonials() {
   testimonials.forEach(testimonial => {
-    testimonial.classList.remove('active');
+    testimonial.classList.remove('active'); // Remove active class from all
   });
 }
 
 // Function to show the current testimonial
 function showCurrentTestimonial() {
-  testimonials[currentIndex].classList.add('active');
+  testimonials[currentIndex].classList.add('active'); // Add active class to current testimonial
 }
 
 // Event listener for the Next button

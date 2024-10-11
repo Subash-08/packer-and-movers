@@ -800,12 +800,7 @@ footer img{
 
 
 /* Base styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   
   .testimonial-section {
     width: 80%;
@@ -820,12 +815,13 @@ body {
   .testimonial-carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 300%; /* For 3 testimonials */
+    width: 100%;
+    justify-content: space-between;
   }
   
   /* Individual testimonial */
   .testimonial {
-    display: flex;
+    display: none; /* Hide by default */
     justify-content: space-between;
     align-items: center;
     min-width: 100%; /* Full width for each testimonial */
@@ -834,6 +830,10 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+  }
+  
+  .testimonial.active {
+    display: flex; /* Show the active testimonial */
   }
   
   .testimonial-content {
@@ -934,15 +934,4 @@ body {
       font-size: 16px;
     }
   }
-  /* Hide all testimonials initially */
-.testimonial {
-    display: none;
-  }
-  
-  /* Show only the active testimonial */
-  .testimonial.active {
-    display: flex;
-  }
-  
-  /* The rest of the styles remain the same */
   
