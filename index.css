@@ -17,6 +17,11 @@ html{
     border-radius: 8px;
 }
 
+nav{
+    position: fixed;
+    top: 0;
+}
+
 .navbar-brand img {
     max-width: 100px;
   }
@@ -69,7 +74,6 @@ nav li a:hover::after{
 }
 
 
-      
    
     html{
         scroll-behavior: smooth;
@@ -801,8 +805,7 @@ footer img{
 
 /* Base styles */
 
-  
-  .testimonial-section {
+.testimonial-section {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
@@ -814,11 +817,12 @@ footer img{
   
   /* Carousel container */
   .testimonial-carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
     width: 80%;
     padding: 20px;
-    justify-content: space-between;
+    justify-content: center;
     margin: auto;
     align-items: center;
   }
@@ -826,23 +830,22 @@ footer img{
   /* Individual testimonial */
   .testimonial {
     display: none; /* Hide by default */
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100%; /* Full width for each testimonial */
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
     background: url(https://www.lifeatcanva.com/Images/quote.svg) no-repeat top left;
+    box-sizing: border-box;
   }
   
   .testimonial.active {
-    display: flex; /* Show the active testimonial */
+    display: grid; /* Show the active testimonial */
+    grid-template-columns: 1fr 320px; /* Content on left, image on right */
+    align-items: center;
+    gap: 20px;
   }
   
   .testimonial-content {
-    flex: 1;
     padding-right: 20px;
   }
   
@@ -870,7 +873,6 @@ footer img{
   }
   
   .testimonial-image {
-    flex: 0 0 auto;
     width: 100%;
     max-width: 320px;
     text-align: center;
@@ -883,7 +885,6 @@ footer img{
     object-fit: cover;
   }
   
-  
   /* Controls (Next/Prev) */
   .controls {
     position: absolute;
@@ -894,12 +895,15 @@ footer img{
     transform: translateY(-50%);
     z-index: 10;
   }
-  .prev{
-    transform: translateX(100px);    
-}
-.next{
-    transform: translateX(-100px);    
-}
+  
+  .prev {
+    transform: translateX(100px);
+  }
+  
+  .next {
+    transform: translateX(-100px);
+  }
+  
   .controls button {
     background-color: #333;
     color: #fff;
@@ -912,8 +916,9 @@ footer img{
   .controls button:hover {
     background-color: #555;
   }
+  
   /* Testimonial controls (radio buttons) */
-.testimonial-controls {
+  .testimonial-controls {
     text-align: center;
     margin-top: 20px;
   }
@@ -933,28 +938,15 @@ footer img{
     background-color: #333;
   }
   
-  /* Additional styling for responsive layout */
-  @media (max-width: 768px) {
-    .testimonial-controls {
-      margin-top: 15px;
-    }
-  
-    .testimonial-controls input[type="radio"] {
-      width: 10px;
-      height: 10px;
-    }
-  }
-  
-  
-  /* Responsive Styles */
+  /* Responsive layout */
   @media (max-width: 768px) {
     .testimonial-section {
       width: 100%;
       padding: 20px;
     }
   
-    .testimonial {
-      flex-direction: column;
+    .testimonial.active {
+      grid-template-columns: 1fr; /* Stack content and image */
       text-align: center;
     }
   
@@ -964,11 +956,6 @@ footer img{
   
     .testimonial-image {
       margin-bottom: 15px;
-      flex: 0 0 100px;
-    }
-  
-    .testimonial-image img {
-      width: 100px;
     }
   
     .testimonial-content .quote {

@@ -1,3 +1,6 @@
+
+
+
 const testimonials = document.querySelectorAll('.testimonial');
 const radioButtons = document.querySelectorAll('.testimonial-controls input[type="radio"]');
 let currentIndex = 0;
@@ -54,3 +57,4 @@ radioButtons.forEach((radio, index) => {
 
 // Start auto transition when the page loads
 startAutoChange();
+
